@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "@reach/router";
-import '../App.css';
+//import '../App.css';
 
 const NavBar = () => {
     return (
@@ -12,12 +12,13 @@ const NavBar = () => {
 
             <header className="row flex-nowrap">
                 {/* Navbar start */}
-                <nav className="navbar navbar-expand-lg navbar-light bg-white">
+                <nav className="navbar navbar-expand-lg ">
                     <div className="container-fluid">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                            <Link to="/"><li className="Nav-Item">Home</li></Link>
                             <Link to="/recipes"><li className="Nav-Item">All Recipes</li></Link>
                             <Link to="createrecipe"><li className="Nav-Item">Create Recipe</li></Link>
-                            <li className="Nav-Item">Profile</li>
+                            <li className="Nav-Item">About</li>
                         </ul>
                     </div>
                 </nav>

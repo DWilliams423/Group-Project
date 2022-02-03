@@ -1,9 +1,9 @@
 import AllRecipes from "../components/All_Recipes";
 import NavBar from "../components/NavBar";
 import axios from "axios";
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 
-const Profile = () => {
+const About = () => {
     return (
         <div>
             <NavBar />
@@ -11,4 +11,4 @@ const Profile = () => {
     )
 }
 
-export default Profile;
+export default About;
