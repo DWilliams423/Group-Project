@@ -7,7 +7,7 @@ const AllRecipes = () => {
     const [recipeList, setRecipeList] = useState("")
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/recipe')
+        axios.get('http://localhost:8000/api/recipes')
             .then(res => {
                 setRecipeList(res.data);
             })
@@ -30,11 +30,11 @@ const AllRecipes = () => {
                                             <div>
                                                 <div className='Recipe-Card'>
                                                     <header>{recipe.recipeTitle}</header>
-                                                    <img src={recipe.recipeImg} alt='Recipe'/>
+                                                    <img src={recipe.recipeImg} alt='Recipe' />
                                                     <p>{recipe.recipeBriefDescrip}</p>
                                                 </div>
                                             </div>
-                                            
+
                                         </td>
                                     </tr>
                                 ))
