@@ -22,8 +22,8 @@ function App() {
         <Dashboard path="/" />
         <Recipes path="recipes" />
         <CreateRecipe path="createrecipe" />
-        <ViewRecipe path="viewrecipe" />
-        <EditRecipe path="editrecipe" />
+        <ViewRecipe path="/recipe/:id" />
+        <EditRecipe path="/recipe/:id/edit" />
       </Router>
     </div>
   );

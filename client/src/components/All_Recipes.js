@@ -30,8 +30,11 @@ const AllRecipes = () => {
                                             <div>
                                                 <div className='Recipe-Card'>
                                                     <header>{recipe.recipeTitle}</header>
-                                                    <img className='Recipe-Img' src={recipe.recipeImg} alt='Recipe'/>
+                                                    <img className='Recipe-Img' src={recipe.recipeImg} alt='Recipe' />
                                                     <p>{recipe.recipeBriefDescrip}</p>
+                                                    <p>   <Link to={"/recipe/" + recipe._id}>
+                                                        details
+                                                    </Link></p>
                                                 </div>
                                             </div>
                                         </td>
