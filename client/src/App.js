@@ -1,15 +1,21 @@
 import './App.css';
+
+import React from "react";
 import { Router } from '@reach/router';
-import Dashboard from './views/Dashboard';
+
+// Component imports
 import NavBar from './components/NavBar';
-import CreateRecipe from './views/CreateRecipe';
+
+// View imports
+import Dashboard from './views/Dashboard';
 import Recipes from './views/Recipes';
 import EditRecipe from './views/EditRecipe';
 import DetailsRecipe from './views/DetailsRecipe';
+import CreateRecipe from './views/CreateRecipe';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App container-fluid min-vh-100">
       <NavBar />
       <Router>
         <Dashboard path="/" />

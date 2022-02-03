@@ -4,17 +4,27 @@ import '../App.css';
 
 const NavBar = () => {
     return (
-        <div className="Nav-Bar">
-            <div>
-                <Link to="/"><header>Website Logo</header></Link>
+        <div className="container-fluid max-vh-10">
+            <div className=" row text-center">
+                <h1 >A food blog</h1>
+                <h4>by people who eat food</h4>
             </div>
-            <div>
-                <ul className="Navigation">
-                    <Link to="/recipes"><li className="Nav-Item">All Recipes</li></Link>
-                    <Link to="createrecipe"><li className="Nav-Item">Create Recipe</li></Link>
-                    <li className="Nav-Item">Profile</li>
-                </ul>
-            </div>
+
+            <header className="row flex-nowrap">
+                {/* Navbar start */}
+                <nav className="navbar navbar-expand-lg navbar-light bg-white">
+                    <div className="container-fluid">
+                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                            <Link to="/recipes"><li className="Nav-Item">All Recipes</li></Link>
+                            <Link to="createrecipe"><li className="Nav-Item">Create Recipe</li></Link>
+                            <li className="Nav-Item">Profile</li>
+                        </ul>
+                    </div>
+                </nav>
+                {/* Navbar end */}
+            </header>
+
+            <hr />
         </div>
     )
 }
