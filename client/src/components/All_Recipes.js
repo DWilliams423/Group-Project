@@ -34,7 +34,6 @@ const AllRecipes = () => {
                                                     <p>{recipe.recipeBriefDescrip}</p>
                                                 </div>
                                             </div>
-                                            
                                         </td>
                                     </tr>
                                 ))
