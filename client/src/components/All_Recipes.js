@@ -7,7 +7,7 @@ const AllRecipes = () => {
     const [recipeList, setRecipeList] = useState("")
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/recipe')
+        axios.get('http://localhost:8000/api/recipes')
             .then(res => {
                 setRecipeList(res.data);
             })
@@ -19,18 +19,18 @@ const AllRecipes = () => {
     return (
         <>
             {/* With server, should map new recipe from form to individual card */}
-            <div>
+            <div className='Recipe-Table'>
                 <table>
                     <tbody>
                         {
                             recipeList ?
                                 recipeList.map((recipe, index) => (
                                     <tr key={index}>
-                                        <td className='Recipe-Table'>
+                                        <td>
                                             <div>
                                                 <div className='Recipe-Card'>
                                                     <header>{recipe.recipeTitle}</header>
-                                                    <img src={recipe.recipeImg} alt='Recipe'/>
+                                                    <img className='Recipe-Img' src={recipe.recipeImg} alt='Recipe'/>
                                                     <p>{recipe.recipeBriefDescrip}</p>
                                                 </div>
                                             </div>

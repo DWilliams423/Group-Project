@@ -15,16 +15,23 @@
 
 /* All Recipes */
 .Recipe-Table {
-  /* border: 1px solid black; */
-  width:fit-content;
+  border: 1px solid black;
+  display: flex;
 }
 
 .Recipe-Card {
   border: 1px solid black;
   width: 250px;
-  height: 350px;
+  height: 300px;
   box-shadow: 0px 10px 10px rgba(0,0,0,0.2), 0px 40px 40px rgba(0,0,0,0.1);
   transition: transform 1s;
+}
+
+.Recipe-Img {
+  width: 200px;
+  height: 100px;
+  object-fit: contain;
+  margin-top: 10px;
 }
 
 .Recipe-Table :hover .Recipe-Card {
