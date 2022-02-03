@@ -8,7 +8,7 @@ const RecipeForm = () => {
     const [recipeBriefDescrip, setRecipeBriefDescrip] = useState("");
     const [recipeIngredients, setRecipeIngredients] = useState("");
     const [recipeInstructions, setRecipeInstructions] = useState("");
-    const [errors,setErrors] = useState([]);
+    const [errors, setErrors] = useState([]);
 
     const onSubmitHandler = e => {
         e.preventDefault();
@@ -17,11 +17,11 @@ const RecipeForm = () => {
             recipeImg,
             recipeBriefDescrip,
             recipeIngredients,
-            recipeInstructions, 
+            recipeInstructions,
         })
             .then((res) => {
                 console.log(res)
-                navigate("/");
+                navigate("/recipes");
             })
             .catch(err => {
                 setErrors(err.response.data.errors);
@@ -29,56 +29,56 @@ const RecipeForm = () => {
     }
     return (
         <>
-        <div style={{margin: "50px", padding:"10px", border:"1px solid black"}}>
-            <form onSubmit={onSubmitHandler}>
-                <header><b><u>Create a New Recipe</u></b></header>
-                <p>
-                    <label style={{margin: "5px"}}><b>Recipe Title:</b></label>
-                    <input type="text" onChange={(e) => setRecipeTitle(e.target.value)} />
-                    {errors.recipeTitle ?
-                        <p style={{color: "red"}}><em>{errors.recipeTitle.message}</em></p>
-                        : null
-                    }
-                </p>
-                <p>
-                    <label style={{margin: "5px"}}><b>Recipe Image:</b></label>
-                    <input type="text" onChange={(e) => setRecipeImg(e.target.value)} />
-                    {errors.recipeImg ?
-                        <p style={{color: "red"}}><em>{errors.recipeImg.message}</em></p>
-                        : null
-                    }
-                </p>
-                <p>
-                    <label style={{margin: "5px"}}><b>Brief Description:</b></label>
-                    <input type="text" onChange={(e) => setRecipeBriefDescrip(e.target.value)} />
-                    {errors.recipeBriefDescrip ?
-                        <p style={{color: "red"}}><em>{errors.recipeBriefDescrip.message}</em></p>
-                        : null
-                    }
-                </p>
-                <p>
-                    <label style={{margin: "5px"}}><b>Ingredients:</b></label>
-                    <textarea onChange={(e) => setRecipeIngredients(e.target.value)} />
-                    {errors.recipeIngredients ?
-                        <p style={{color: "red"}}><em>{errors.recipeIngredients.message}</em></p>
-                        : null
-                    }
-                </p>
-                <p>
-                    <label style={{margin: "5px"}}><b>Instructions:</b></label>
-                    <textarea onChange={(e) => setRecipeInstructions(e.target.value)} />
-                    {errors.recipeInstructions ?
-                        <p style={{color: "red"}}><em>{errors.recipeInstructions.message}</em></p>
-                        : null
-                    }
-                </p>
-                <input type="submit" style={{backgroundColor: "red", color: "white"}} />
-            </form>
-            <button style={{backgroundColor: "blue", color: "white"}} onClick={() => {navigate("/")}}>Return Home</button>
-        </div>
+            <div style={{ margin: "50px", padding: "10px", border: "1px solid black" }}>
+                <form onSubmit={onSubmitHandler}>
+                    <header><b><u>Create a New Recipe</u></b></header>
+                    <p>
+                        <label style={{ margin: "5px" }}><b>Recipe Title:</b></label>
+                        <input type="text" onChange={(e) => setRecipeTitle(e.target.value)} />
+                        {errors.recipeTitle ?
+                            <p style={{ color: "red" }}><em>{errors.recipeTitle.message}</em></p>
+                            : null
+                        }
+                    </p>
+                    <p>
+                        <label style={{ margin: "5px" }}><b>Recipe Image:</b></label>
+                        <input type="text" onChange={(e) => setRecipeImg(e.target.value)} />
+                        {errors.recipeImg ?
+                            <p style={{ color: "red" }}><em>{errors.recipeImg.message}</em></p>
+                            : null
+                        }
+                    </p>
+                    <p>
+                        <label style={{ margin: "5px" }}><b>Brief Description:</b></label>
+                        <input type="text" onChange={(e) => setRecipeBriefDescrip(e.target.value)} />
+                        {errors.recipeBriefDescrip ?
+                            <p style={{ color: "red" }}><em>{errors.recipeBriefDescrip.message}</em></p>
+                            : null
+                        }
+                    </p>
+                    <p>
+                        <label style={{ margin: "5px" }}><b>Ingredients:</b></label>
+                        <textarea onChange={(e) => setRecipeIngredients(e.target.value)} />
+                        {errors.recipeIngredients ?
+                            <p style={{ color: "red" }}><em>{errors.recipeIngredients.message}</em></p>
+                            : null
+                        }
+                    </p>
+                    <p>
+                        <label style={{ margin: "5px" }}><b>Instructions:</b></label>
+                        <textarea onChange={(e) => setRecipeInstructions(e.target.value)} />
+                        {errors.recipeInstructions ?
+                            <p style={{ color: "red" }}><em>{errors.recipeInstructions.message}</em></p>
+                            : null
+                        }
+                    </p>
+                    <input type="submit" style={{ backgroundColor: "red", color: "white" }} />
+                </form>
+                <button style={{ backgroundColor: "blue", color: "white" }} onClick={() => { navigate("/") }}>Return Home</button>
+            </div>
 
-        {/* Example Recipe Card using form */}
-        {/* <div>
+            {/* Example Recipe Card using form */}
+            {/* <div>
         <table>
             <tr>
                 <td className='Recipe-Table'>
@@ -104,7 +104,7 @@ const RecipeForm = () => {
         </table>
     </div> */}
         </>
-        
+
     )
 }
 
