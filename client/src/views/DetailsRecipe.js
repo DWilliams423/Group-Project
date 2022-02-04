@@ -43,7 +43,7 @@ const DetailsRecipe = (props) => {
                 </div>
             </div>
             <button style={{backgroundColor: "blue", color: "white"}} onClick={() => {navigate("/")}}>Return Home</button>
-            <button style={{backgroundColor: "blue", color: "white"}} onClick={(e) => {navigate(`/editrecipe/${recipe._id}`)}}><b><u>Edit</u> {`${recipeTitle}`}</b> </button>
+            <button style={{backgroundColor: "blue", color: "white"}} onClick={() => {navigate(`/editrecipe/${id}`)}}><b><u>Edit</u> {`${recipeTitle}`}</b> </button>
             <button style={{backgroundColor: "red", color:"white"}} onClick={(e) => { deleteRecipe(recipe._id) }}><b><u>Delete</u> {`${recipeTitle}`}</b> </button>
         </div>
     )

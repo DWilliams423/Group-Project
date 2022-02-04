@@ -21,6 +21,7 @@ const EditRecipeForm = (props) => {
                 setRecipeInstructions(res.data.recipeInstructions)
             })
             .catch(err => {
+                console.log(err)
                 setErrors(err.response.data.errors);
             })
     }, [id])
