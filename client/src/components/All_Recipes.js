@@ -19,13 +19,13 @@ const AllRecipes = () => {
     return (
         <>
             {/* With server, should map new recipe from form to individual card */}
-            <div className='Recipe-Table'>
+            <div className="Recipe-Table bg-success text-black bg-opacity-50">
                 {
                     recipeList ?
                         recipeList.map((recipe, index) => (
                             <div key={index} >
                                 <Link to={`/detailsrecipe/${recipe._id}`}>
-                                    <div className='Recipe-Card'>
+                                    <div className="Recipe-Card bg-success text-black bg-opacity-25">
                                         <header>{recipe.recipeTitle}</header>
                                         <img className='Recipe-Img' src={recipe.recipeImg} alt='Recipe' />
                                         <p>{recipe.recipeBriefDescrip}</p>

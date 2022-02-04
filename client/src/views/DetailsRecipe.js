@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import {navigate} from '@reach/router';
+import { navigate } from '@reach/router';
+import LikeButton from '../components/LikeButton';
 import '../App.css';
 
 const DetailsRecipe = (props) => {
-        const {id} = props;
-        const [recipe, setRecipe] = useState("");
-        const [recipeTitle, setRecipeTitle] = useState("");
-        const [recipeImg, setRecipeImg] = useState("");
-        const [recipeBriefDescrip, setRecipeBriefDescrip] = useState("");
-        const [recipeIngredients, setRecipeIngredients] = useState("");
-        const [recipeInstructions, setRecipeInstructions] = useState("");
+    const { id } = props;
+    const [recipe, setRecipe] = useState("");
+    const [recipeTitle, setRecipeTitle] = useState("");
+    const [recipeImg, setRecipeImg] = useState("");
+    const [recipeBriefDescrip, setRecipeBriefDescrip] = useState("");
+    const [recipeIngredients, setRecipeIngredients] = useState("");
+    const [recipeInstructions, setRecipeInstructions] = useState("");
 
     useEffect(() => {
         axios.get(`http://localhost:8000/api/recipe/${id}`)
@@ -29,10 +30,10 @@ const DetailsRecipe = (props) => {
                 setRecipe(recipe.filter((recipe) => recipe._id !== recipeId));
                 navigate("/");
             })
-            .catch ((err) => console.log(err));
+            .catch((err) => console.log(err));
     }
     return (
-        <div className="Recipe-Details">
+        <div className="Recipe-Details bg-success text-white bg-opacity-50">
             <div className='Rec-Score-Content'>
                 <div className='Rec-Content'>
                     <p><b>{recipeTitle}</b></p>
@@ -40,10 +41,13 @@ const DetailsRecipe = (props) => {
                     <p><b>{recipeBriefDescrip}</b></p>
                     <p><u>Ingredients</u>: <b>{recipeIngredients}</b></p>
                     <p><u>Directions</u>: <b>{recipeInstructions}</b></p>
+                    <LikeButton
+                        name={recipeTitle}
+                    />
                 </div>
             </div>
-            <button style={{backgroundColor: "blue", color: "white"}} onClick={() => {navigate("/")}}>Return Home</button>
-            <button style={{backgroundColor: "red", color:"white"}} onClick={(e) => { deleteRecipe(recipe._id) }}><b><u>Delete</u> {`${recipeTitle}`}</b> </button>
+            <button style={{ backgroundColor: "blue", color: "white" }} onClick={() => { navigate("/") }}>Return Home</button>
+            <button style={{ backgroundColor: "red", color: "white" }} onClick={(e) => { deleteRecipe(recipe._id) }}><b><u>Delete</u> {`${recipeTitle}`}</b> </button>
         </div>
     )
 }
