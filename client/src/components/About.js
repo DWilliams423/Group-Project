@@ -4,8 +4,8 @@ const About = () => {
 
     return (
         <div className="container-fluid max-vh-10">
-            <div className=" row text-center">
-                <p><b>Welcome to a food blog! </b></p>
+            <div className=" row">
+                <h1>Welcome!</h1>
 
                 <p>
                     My name is Some Guy, and I created a food blogto celebrate how nourishing, fun, and delicious cooking with seasonal fruits and vegetables can be. I hope that the recipes here inspire you to try cooking a new vegetable, or try cooking a familiar vegetable in a new way.
