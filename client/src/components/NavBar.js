@@ -4,7 +4,7 @@ import { Link } from "@reach/router";
 
 const NavBar = () => {
     return (
-        <div className="container-fluid max-vh-10">
+        <div className="container-fluid max-vh-10 bg-success text-white bg-opacity-75">
             <div className=" row text-center">
                 <h1 >A food blog</h1>
                 <h4>by people who eat food</h4>

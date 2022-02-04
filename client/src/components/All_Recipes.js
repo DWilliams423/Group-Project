@@ -24,14 +24,14 @@ const AllRecipes = () => {
                     recipeList ?
                         recipeList.map((recipe, index) => (
                             <div key={index} >
-                                <Link to={`detailsrecipe/${recipe._id}`}>
+                                <Link to={`/detailsrecipe/${recipe._id}`}>
                                     <div className='Recipe-Card'>
-                                    <header>{recipe.recipeTitle}</header>
-                                    <img className='Recipe-Img' src={recipe.recipeImg} alt='Recipe' />
-                                    <p>{recipe.recipeBriefDescrip}</p>
+                                        <header>{recipe.recipeTitle}</header>
+                                        <img className='Recipe-Img' src={recipe.recipeImg} alt='Recipe' />
+                                        <p>{recipe.recipeBriefDescrip}</p>
                                     </div>
                                 </Link>
-                                
+
                             </div>
                         ))
                         : null

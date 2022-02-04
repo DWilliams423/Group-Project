@@ -5,6 +5,7 @@ import { Router } from '@reach/router';
 
 // Component imports
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 
 // View imports
 import Dashboard from './views/Dashboard';
@@ -29,6 +30,7 @@ function App() {
         <DetailsRecipe path="detailsrecipe/:id" />
         <About path="about" />
       </Router>
+      <Footer />
     </div>
   );
 }
