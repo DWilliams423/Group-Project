@@ -31,7 +31,7 @@ const AllRecipes = () => {
                                         <p>{recipe.recipeBriefDescrip}</p>
                                     </div>
                                 </Link>
-
+                                <button style={{backgroundColor: "blue", color: "white"}} onClick={() => {navigate(`/editrecipe/${recipe._id}`)}}><b><u>Edit</u> {`${recipe.recipeTitle}`}</b> </button>
                             </div>
                         ))
                         : null

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { navigate } from '@reach/router';
-import LikeButton from '../components/LikeButton';
 import '../App.css';
 
 const DetailsRecipe = (props) => {
@@ -16,6 +15,7 @@ const DetailsRecipe = (props) => {
     useEffect(() => {
         axios.get(`http://localhost:8000/api/recipe/${id}`)
             .then(res => {
+                console.log(res)
                 setRecipeTitle(res.data.recipeTitle)
                 setRecipeImg(res.data.recipeImg)
                 setRecipeBriefDescrip(res.data.recipeBriefDescrip)
@@ -47,6 +47,7 @@ const DetailsRecipe = (props) => {
                 </div>
             </div>
             <button style={{ backgroundColor: "blue", color: "white" }} onClick={() => { navigate("/") }}>Return Home</button>
+            <button style={{ backgroundColor: "blue", color: "white" }} onClick={(e) => { navigate(`/editrecipe/${id}`) }}><b><u>Edit</u> {`${recipeTitle}`}</b> </button>
             <button style={{ backgroundColor: "red", color: "white" }} onClick={(e) => { deleteRecipe(recipe._id) }}><b><u>Delete</u> {`${recipeTitle}`}</b> </button>
         </div>
     )
