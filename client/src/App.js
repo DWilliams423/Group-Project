@@ -13,6 +13,7 @@ import CreateRecipe from './views/CreateRecipe';
 import ViewRecipe from './views/ViewRecipe';
 import EditRecipe from './views/EditRecipe';
 import DetailsRecipe from './views/DetailsRecipe';
+import About from './components/About';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <ViewRecipe path="viewrecipe" />
         <EditRecipe path="editrecipe" />
         <DetailsRecipe path="detailsrecipe/:id" />
+        <About path="about" />
       </Router>
     </div>
   );
