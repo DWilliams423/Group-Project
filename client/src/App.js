@@ -26,7 +26,7 @@ function App() {
         <Recipes path="recipes" />
         <CreateRecipe path="createrecipe" />
         <ViewRecipe path="viewrecipe" />
-        <EditRecipe path="editrecipe" />
+        <EditRecipe path="editrecipe/:id" />
         <DetailsRecipe path="detailsrecipe/:id" />
         <About path="about" />
       </Router>
