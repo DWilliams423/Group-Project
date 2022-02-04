@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { navigate } from '@reach/router';
 import '../App.css';
+import LikeButton from '../components/LikeButton';
 
 const DetailsRecipe = (props) => {
     const { id } = props;
