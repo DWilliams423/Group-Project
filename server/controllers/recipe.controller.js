@@ -18,7 +18,7 @@ const getAllRecipes = (req, res) => {
     // Get all recipes
     Recipe.find()
         .then((allRecipes) => {
-            console.log(allRecipes);
+
             res.json(allRecipes);
         })
         .catch((err) => {
