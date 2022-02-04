@@ -15,6 +15,7 @@ const DetailsRecipe = (props) => {
     useEffect(() => {
         axios.get(`http://localhost:8000/api/recipe/${id}`)
             .then(res => {
+                console.log(res)
                 setRecipeTitle(res.data.recipeTitle)
                 setRecipeImg(res.data.recipeImg)
                 setRecipeBriefDescrip(res.data.recipeBriefDescrip)
