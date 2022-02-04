@@ -51,7 +51,7 @@ const EditRecipeForm = (props) => {
             <form onSubmit={editRecipe}>
                 <p>
                     <label style={{margin: "5px"}}><b>Recipe Title:</b></label>
-                    <input type="text" onChange={(e) => setRecipeTitle(e.target.value)} />
+                    <input type="text" value={recipeTitle} onChange={(e) => setRecipeTitle(e.target.value)} />
                     {errors.recipeTitle ?
                         <p style={{color: "red"}}><em>{errors.recipeTitle.message}</em></p>
                         : null
@@ -59,7 +59,7 @@ const EditRecipeForm = (props) => {
                 </p>
                 <p>
                     <label style={{margin: "5px"}}><b>Recipe Image:</b></label>
-                    <input type="text" onChange={(e) => setRecipeImg(e.target.value)} />
+                    <input type="text" value={recipeImg} onChange={(e) => setRecipeImg(e.target.value)} />
                     {errors.recipeImg ?
                         <p style={{color: "red"}}><em>{errors.recipeImg.message}</em></p>
                         : null
@@ -67,7 +67,7 @@ const EditRecipeForm = (props) => {
                 </p>
                 <p>
                     <label style={{margin: "5px"}}><b>Brief Description:</b></label>
-                    <input type="text" onChange={(e) => setRecipeBriefDescrip(e.target.value)} />
+                    <input type="text" value={recipeBriefDescrip} onChange={(e) => setRecipeBriefDescrip(e.target.value)} />
                     {errors.recipeBriefDescrip ?
                         <p style={{color: "red"}}><em>{errors.recipeBriefDescrip.message}</em></p>
                         : null
@@ -75,7 +75,7 @@ const EditRecipeForm = (props) => {
                 </p>
                 <p>
                     <label style={{margin: "5px"}}><b>Ingredients:</b></label>
-                    <textarea onChange={(e) => setRecipeIngredients(e.target.value)} />
+                    <textarea value={recipeIngredients} onChange={(e) => setRecipeIngredients(e.target.value)} />
                     {errors.recipeIngredients ?
                         <p style={{color: "red"}}><em>{errors.recipeIngredients.message}</em></p>
                         : null
@@ -83,7 +83,7 @@ const EditRecipeForm = (props) => {
                 </p>
                 <p>
                     <label style={{margin: "5px"}}><b>Instructions:</b></label>
-                    <textarea onChange={(e) => setRecipeInstructions(e.target.value)} />
+                    <textarea value={recipeInstructions} onChange={(e) => setRecipeInstructions(e.target.value)} />
                     {errors.recipeInstructions ?
                         <p style={{color: "red"}}><em>{errors.recipeInstructions.message}</em></p>
                         : null

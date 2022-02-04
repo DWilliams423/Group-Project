@@ -5,7 +5,7 @@ import '../App.css';
 
 const DetailsRecipe = (props) => {
     const { id } = props;
-    const [recipe, setRecipe] = useState("");
+    const [recipe, setRecipe] = useState([]);
     const [recipeTitle, setRecipeTitle] = useState("");
     const [recipeImg, setRecipeImg] = useState("");
     const [recipeBriefDescrip, setRecipeBriefDescrip] = useState("");
