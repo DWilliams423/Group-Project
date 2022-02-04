@@ -20,30 +20,22 @@ const AllRecipes = () => {
         <>
             {/* With server, should map new recipe from form to individual card */}
             <div className='Recipe-Table'>
-                <table>
-                    <tbody>
-                        {
-                            recipeList ?
-                                recipeList.map((recipe, index) => (
-                                    <tr key={index}>
-                                        <td>
-                                            <div>
-                                                <div className='Recipe-Card'>
-                                                    <header>{recipe.recipeTitle}</header>
-                                                    <img className='Recipe-Img' src={recipe.recipeImg} alt='Recipe' />
-                                                    <p>{recipe.recipeBriefDescrip}</p>
-                                                    <p>   <Link to={"/recipe/" + recipe._id}>
-                                                        details
-                                                    </Link></p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                ))
-                                : null
-                        }
-                    </tbody>
-                </table>
+                {
+                    recipeList ?
+                        recipeList.map((recipe, index) => (
+                            <div key={index} >
+                                <Link to={`detailsrecipe/${recipe._id}`}>
+                                    <div className='Recipe-Card'>
+                                    <header>{recipe.recipeTitle}</header>
+                                    <img className='Recipe-Img' src={recipe.recipeImg} alt='Recipe' />
+                                    <p>{recipe.recipeBriefDescrip}</p>
+                                    </div>
+                                </Link>
+                                
+                            </div>
+                        ))
+                        : null
+                }
             </div>
         </>
     )
