@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { navigate } from '@reach/router';
 import '../App.css';
+import LikeButton from '../components/LikeButton';
 
 const DetailsRecipe = (props) => {
     const { id } = props;
@@ -41,6 +42,9 @@ const DetailsRecipe = (props) => {
                     <p><b>{recipeBriefDescrip}</b></p>
                     <p><u>Ingredients</u>: <b>{recipeIngredients}</b></p>
                     <p><u>Directions</u>: <b>{recipeInstructions}</b></p>
+                    <LikeButton
+                        name={recipeTitle}
+                    />
                 </div>
             </div>
             <button style={{ backgroundColor: "blue", color: "white" }} onClick={() => { navigate("/") }}>Return Home</button>
